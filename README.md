@@ -10,9 +10,10 @@ First, clone the repository, navigate to the project folder, install all depende
 
 
 ## Clone the repository
+```bash
 git clone https://github.com/Insidenhhset/MERN-Ecommerce-project.git
 
-# Navigate to the project folder
+## Navigate to the project folder
 cd MERN-Ecommerce-project
 
 ## Install backend dependencies
@@ -26,7 +27,7 @@ npm install
 cd ..
 
 ## Create a .env file in the root directory and add the following environment variables:
-.env
+
 PORT=5000
 MONGO_URI=YOUR_DB_URL
 UPSTASH_REDIS_URL=YOUR_REDIS_URL
@@ -38,5 +39,3 @@ CLOUDINARY_API_SECRET=YOUR_API_SECRET
 STRIPE_SECRET_KEY=YOUR_STRIPE_SECRET_KEY
 CLIENT_URL=http://localhost:5173
 NODE_ENV=development
-
-```bash
