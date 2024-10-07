@@ -8,9 +8,8 @@ To get started with the project, follow the steps below:
 
 First, clone the repository, navigate to the project folder, install all dependencies, and configure the environment variables.
 
-
-## Clone the repository
 ```bash
+## Clone the repository
 git clone https://github.com/Insidenhhset/MERN-Ecommerce-project.git
 
 ## Navigate to the project folder
@@ -20,7 +19,7 @@ cd MERN-Ecommerce-project
 npm install
 
 #3 If your frontend is in a separate folder, navigate to it and install frontend dependencies
-cd client
+cd frontend
 npm install
 
 ## Navigate back to the project root
