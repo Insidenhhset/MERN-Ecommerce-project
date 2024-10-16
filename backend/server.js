@@ -1,5 +1,6 @@
 import express from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import cookieParser from "cookie-parser";
 import path from "path";
 
@@ -16,8 +17,17 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 
 const __dirname = path.resolve();
+
+app.use(
+  cors({
+    origin: CLIENT_URL,
+    credentials: true, // Allow cookies and credentials to be sent
+    methods: ["GET", "POST", "PUT", "DELETE"], // Specify allowed methods
+  })
+);
 
 app.use(express.json({ limit: "10mb" })); // allows you to parse the body of the request
 app.use(cookieParser());
@@ -38,6 +48,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.listen(PORT, () => {
-  console.log("Server is running on http://localhost:" + PORT);
+  //   console.log("Server is running on http://localhost:" + PORT);
+  console.log(CLIENT_URL);
   connectDB();
 });
